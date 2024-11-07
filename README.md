@@ -99,17 +99,20 @@ Repite esto para los demás usuarios.
 # solucion 3 
 
 ### Configurar permisos en gruponehir
+```
 sudo chmod 770 /home/usuario2/archivo2.txt
 sudo chmod 770 /home/usuario3/archivo3.txt
 sudo chown usuario2:gruponehir /home/usuario2/archivo2.txt
 sudo chown usuario3:gruponehir /home/usuario3/archivo3.txt
-
+```
 ### Dar permisos de lectura al grupo
+```
 sudo chmod 750 /home/usuario1_1/archivo1.txt
 sudo setfacl -m u:usuario1:rwx /home/usuario2/archivo2.txt
 sudo setfacl -m u:usuario1:rwx /home/usuario3/archivo3.txt
-
+```
 ### Configurar permisos en grupojuancho
+```
 sudo chmod 770 /home/usuario5/archivo2.txt
 sudo chmod 770 /home/usuario6/archivo3.txt
 sudo chown usuario5:grupojuancho /home/usuario5/archivo2.txt
@@ -118,8 +121,9 @@ sudo chown usuario6:grupojuancho /home/usuario6/archivo3.txt
 sudo chmod 750 /home/usuario2_1/archivo1.txt
 sudo setfacl -m u:usuario4:rwx /home/usuario5/archivo2.txt
 sudo setfacl -m u:usuario4:rwx /home/usuario6/archivo3.txt
-
+```
 ### Configurar permisos en grupo3
+```
 sudo chmod 770 /home/usuario8/archivo2.txt
 sudo chmod 770 /home/usuario9/archivo3.txt
 sudo chown usuario8:grupo3 /home/usuario8/archivo2.txt
@@ -128,7 +132,7 @@ sudo chown usuario9:grupo3 /home/usuario8/archivo3.txt
 sudo chmod 750 /home/usuario3_1/archivo1.txt
 sudo setfacl -m u:usuario7:rwx /home/usuario8/archivo2.txt
 sudo setfacl -m u:usuario7:rwx /home/usuario9/archivo3.txt
-
+```
 NOTA:
 chmod 770: Permite al propietario y al grupo leer, escribir y ejecutar; otros no tienen ningún permiso.
 chmod 750: Permite al propietario todos los permisos, al grupo solo lectura y ejecución, y otros no tienen permisos.
