@@ -50,7 +50,7 @@ echo "contraseña7" | sudo passwd --stdin usuario7
 echo "contraseña8" | sudo passwd --stdin usuario8
 echo "contraseña9" | sudo passwd --stdin usuario9
 ```
-nota:
+NOTA:
 Estos comandos harán lo siguiente:
 
 groupadd: crea un nuevo grupo.
@@ -77,7 +77,7 @@ sudo -u usuario8 touch /home/usuario8/archivo2.txt
 sudo -u usuario9 touch /home/usuario9/archivo3.txt
 ```
 
-nota:
+NOTA:
 sudo -u nombre_usuario: Ejecuta el comando como el usuario especificado.
 touch /home/nombre_usuario/archivo.txt: Crea un archivo de texto vacío en el directorio de inicio del usuario.
 Si prefieres que los archivos sean de formato .doc, simplemente cambia la extensión de los archivos
@@ -129,7 +129,7 @@ sudo chmod 750 /home/usuario3_1/archivo1.txt
 sudo setfacl -m u:usuario7:rwx /home/usuario8/archivo2.txt
 sudo setfacl -m u:usuario7:rwx /home/usuario9/archivo3.txt
 
-nota:
+NOTA:
 chmod 770: Permite al propietario y al grupo leer, escribir y ejecutar; otros no tienen ningún permiso.
 chmod 750: Permite al propietario todos los permisos, al grupo solo lectura y ejecución, y otros no tienen permisos.
 setfacl -m u:usuario:rwx: Configura permisos de lectura, escritura y ejecución para un usuario específico sobre un archivo.
