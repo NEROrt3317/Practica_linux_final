@@ -108,7 +108,7 @@ sudo chown usuario3:gruponehir /home/usuario3/archivo3.txt
 ```
 ### Dar permisos de lectura al grupo
 ```
-sudo chmod 750 /home/usuario1_1/archivo1.txt
+sudo chmod 750 /home/usuario1/archivo1.txt
 sudo setfacl -m u:usuario1:rwx /home/usuario2/archivo2.txt
 sudo setfacl -m u:usuario1:rwx /home/usuario3/archivo3.txt
 ```
