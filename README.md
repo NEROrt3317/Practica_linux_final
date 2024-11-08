@@ -50,7 +50,7 @@ echo "contraseña7" | sudo passwd --stdin usuario7
 echo "contraseña8" | sudo passwd --stdin usuario8
 echo "contraseña9" | sudo passwd --stdin usuario9
 ```
-NOTA:
+_NOTA_:
 Estos comandos harán lo siguiente:
 
 `groupadd`: crea un nuevo grupo.
@@ -77,10 +77,11 @@ sudo -u usuario8 touch /home/usuario8/archivo2.txt
 sudo -u usuario9 touch /home/usuario9/archivo3.txt
 ```
 
-NOTA:
-sudo -u nombre_usuario: Ejecuta el comando como el usuario especificado.
-touch /home/nombre_usuario/archivo.txt: Crea un archivo de texto vacío en el directorio de inicio del usuario.
+_NOTA_:
+`sudo -u nombre_usuario`: Ejecuta el comando como el usuario especificado.
+`touch /home/nombre_usuario/archivo.txt`: Crea un archivo de texto vacío en el directorio de inicio del usuario.
 Si prefieres que los archivos sean de formato .doc, simplemente cambia la extensión de los archivos
+EJEMPLO
 ```
 sudo -u usuario1 touch /home/usuario1/archivo1.doc
 ```
@@ -133,7 +134,7 @@ sudo chmod 750 /home/usuario3_1/archivo1.txt
 sudo setfacl -m u:usuario7:rwx /home/usuario8/archivo2.txt
 sudo setfacl -m u:usuario7:rwx /home/usuario9/archivo3.txt
 ```
-NOTA:
+_NOTA_:
 `chmod 770`: Permite al propietario y al grupo leer, escribir y ejecutar; otros no tienen ningún permiso.
 `chmod 750`: Permite al propietario todos los permisos, al grupo solo lectura y ejecución, y otros no tienen permisos.
 `setfacl -m u`:usuario:rwx: Configura permisos de lectura, escritura y ejecución para un usuario específico sobre un archivo.
@@ -153,9 +154,27 @@ sudo setfacl -m u:usuario1:rwx /home/usuario4/archivo1.txt
 sudo setfacl -m u:usuario1:rwx /home/usuario5/archivo2.txt
 sudo setfacl -m u:usuario1:rwx /home/usuario6/archivo3.txt
 ```
+1. Para los archivos del grupo gruposofia:
+Los archivos de los usuarios del grupo gruposofia son:
+
+* `/home/usuario4/archivo1.txt`
+* `/home/usuario5/archivo2.txt`
+* `/home/usuario6/archivo3.txt`
+
 ### Dar permisos completos (lectura, escritura, ejecución) a usuario1 de grupojuancho
 ```
 sudo setfacl -m u:usuario1:rwx /home/usuario7/archivo1.txt
 sudo setfacl -m u:usuario1:rwx /home/usuario8/archivo2.txt
 sudo setfacl -m u:usuario1:rwx /home/usuario9/archivo3.txt
 ```
+2. Para los archivos del grupo grupojuancho:
+Los archivos de los usuarios del grupo grupojuancho son:
+
+* `/home/usuario7/archivo1.txt`
+* `/home/usuario8/archivo2.txt`
+* `/home/usuario9/archivo3.txt`
+
+_NOTA_:
+
+`setfacl -m u:usuario1:rwx`: Le da a usuario1 todos los permisos (rwx) sobre el archivo.
+`setfacl -m u:usuario2:r` & `setfacl -m u:usuario3:r:` Les da a los usuarios usuario2 y usuario3 solo permisos de lectura (r).
