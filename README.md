@@ -112,25 +112,25 @@ sudo chmod 750 /home/usuario1/archivo1.txt
 sudo setfacl -m u:usuario1:rwx /home/usuario2/archivo2.txt
 sudo setfacl -m u:usuario1:rwx /home/usuario3/archivo3.txt
 ```
-### Configurar permisos en grupojuancho
+### Configurar permisos en gruposofia
 ```
 sudo chmod 770 /home/usuario5/archivo2.txt
 sudo chmod 770 /home/usuario6/archivo3.txt
-sudo chown usuario5:grupojuancho /home/usuario5/archivo2.txt
-sudo chown usuario6:grupojuancho /home/usuario6/archivo3.txt
+sudo chown usuario5:gruposofia /home/usuario5/archivo2.txt
+sudo chown usuario6:gruposofia /home/usuario6/archivo3.txt
 
-sudo chmod 750 /home/usuario2_1/archivo1.txt
+sudo chmod 750 /home/usuario2/archivo1.txt
 sudo setfacl -m u:usuario4:rwx /home/usuario5/archivo2.txt
 sudo setfacl -m u:usuario4:rwx /home/usuario6/archivo3.txt
 ```
-### Configurar permisos en grupo3
+### Configurar permisos en grupojuancho
 ```
 sudo chmod 770 /home/usuario8/archivo2.txt
 sudo chmod 770 /home/usuario9/archivo3.txt
-sudo chown usuario8:grupo3 /home/usuario8/archivo2.txt
-sudo chown usuario9:grupo3 /home/usuario8/archivo3.txt
+sudo chown usuario8:grupojuancho /home/usuario8/archivo2.txt
+sudo chown usuario9:grupojuancho /home/usuario8/archivo3.txt
 
-sudo chmod 750 /home/usuario3_1/archivo1.txt
+sudo chmod 750 /home/usuario3/archivo1.txt
 sudo setfacl -m u:usuario7:rwx /home/usuario8/archivo2.txt
 sudo setfacl -m u:usuario7:rwx /home/usuario9/archivo3.txt
 ```
