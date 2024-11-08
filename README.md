@@ -6,7 +6,7 @@ Esto en la entrega de practica de linux final
 3. Para cada grupo uno de los usuarios debe tener activos todos los permisos a los archivos de los demás usuarios del grupo y, además, los otros usuarios del grupo, solo pueden tener acceso de lectura de los archivos de los otros usuarios
 4. En el grupo que llamaremos principal un usuario tendrá todos los permisos a todos los archivos de los demás grupos
 
-# solucion 1 
+# SOLUCION 1 
 ## crear grupos
 ```
 sudo groupadd gruponehir
@@ -53,11 +53,11 @@ echo "contraseña9" | sudo passwd --stdin usuario9
 NOTA:
 Estos comandos harán lo siguiente:
 
-groupadd: crea un nuevo grupo.
-useradd -m -G: crea un usuario con un directorio de inicio y lo asigna a un grupo.
-passwd: establece una contraseña para el usuario (puedes configurar las contraseñas de manera manual usando sudo passwd nombre_usuario si --stdin no está disponible).
+`groupadd`: crea un nuevo grupo.
+`useradd -m -G`: crea un usuario con un directorio de inicio y lo asigna a un grupo.
+`passwd`: establece una contraseña para el usuario (puedes configurar las contraseñas de manera manual usando sudo passwd nombre_usuario si --stdin no está disponible).
 
-# solucion 2
+# SOLUCION 2
 # Crear archivos .txt para los usuarios del gruponehir
 ```
 sudo -u usuario1 touch /home/usuario1/archivo1.txt
@@ -96,7 +96,7 @@ sudo mkdir -p /home/usuario3
 ```
 Repite esto para los demás usuarios.
 
-# solucion 3 
+# SOLUCION 3 
 
 ### Configurar permisos en gruponehir
 ```
@@ -134,11 +134,28 @@ sudo setfacl -m u:usuario7:rwx /home/usuario8/archivo2.txt
 sudo setfacl -m u:usuario7:rwx /home/usuario9/archivo3.txt
 ```
 NOTA:
-chmod 770: Permite al propietario y al grupo leer, escribir y ejecutar; otros no tienen ningún permiso.
-chmod 750: Permite al propietario todos los permisos, al grupo solo lectura y ejecución, y otros no tienen permisos.
-setfacl -m u:usuario:rwx: Configura permisos de lectura, escritura y ejecución para un usuario específico sobre un archivo.
-chown: Cambia el propietario y el grupo de un archivo.
-Con estos comandos, cada usuario líder de grupo (usuario1, usuario4, usuario7) tendrá acceso total a los archivos de los demás usuarios del grupo, mientras que los otros usuarios solo tendrán permisos de lectura sobre los archivos de los demás.
+`chmod 770`: Permite al propietario y al grupo leer, escribir y ejecutar; otros no tienen ningún permiso.
+`chmod 750`: Permite al propietario todos los permisos, al grupo solo lectura y ejecución, y otros no tienen permisos.
+`setfacl -m u`:usuario:rwx: Configura permisos de lectura, escritura y ejecución para un usuario específico sobre un archivo.
+`chown`: Cambia el propietario y el grupo de un archivo.
 
 
+Con estos comandos, cada usuario líder de grupo (`usuario1`, `usuario4`, `usuario7`) tendrá acceso total a los archivos de los demás usuarios del grupo, mientras que los otros usuarios solo tendrán permisos de lectura sobre los archivos de los demás.
 
+# SOLUCION 4
+En este caso el grupo principal será `gruponehir` y el usuario uno tendrá acceso a todo 
+
+Queremos que `usuario1` tenga acceso total a estos archivos. Recuerde que `usuario1` ya tiene los permisos de `gruponehir`
+
+### Dar permisos completos (lectura, escritura, ejecución) a usuario1 de gruposofia
+```
+sudo setfacl -m u:usuario1:rwx /home/usuario4/archivo1.txt
+sudo setfacl -m u:usuario1:rwx /home/usuario5/archivo2.txt
+sudo setfacl -m u:usuario1:rwx /home/usuario6/archivo3.txt
+```
+### Dar permisos completos (lectura, escritura, ejecución) a usuario1 de grupojuancho
+```
+sudo setfacl -m u:usuario1:rwx /home/usuario7/archivo1.txt
+sudo setfacl -m u:usuario1:rwx /home/usuario8/archivo2.txt
+sudo setfacl -m u:usuario1:rwx /home/usuario9/archivo3.txt
+```
