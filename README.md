@@ -136,6 +136,13 @@ sudo setfacl -m u:usuario7:rwx /home/usuario8/archivo2.txt
 sudo setfacl -m u:usuario7:rwx /home/usuario9/archivo3.txt
 ```
 _NOTA_:
+Tener en ceunta que se dividen en 3 7-5-0: lo cual me indica 
+1. primer intem (3)
+Propietario: Tiene lectura, escritura y ejecución (7 = 4+2+1).
+2. segundo item (5)
+Grupo : Tiene lectura y ejecución (5 = 4+1).
+3. item item(0)
+Otros: No tienen ningún permiso (0).
 `chmod 770`: Permite al propietario y al grupo leer, escribir y ejecutar; otros no tienen ningún permiso.
 `chmod 750`: Permite al propietario todos los permisos, al grupo solo lectura y ejecución, y otros no tienen permisos.
 `setfacl -m u`:usuario:rwx: Configura permisos de lectura, escritura y ejecución para un usuario específico sobre un archivo.
