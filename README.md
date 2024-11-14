@@ -120,7 +120,7 @@ sudo chmod 770 /home/usuario6/archivo3.txt
 sudo chown usuario5:gruposofia /home/usuario5/archivo2.txt
 sudo chown usuario6:gruposofia /home/usuario6/archivo3.txt
 
-sudo chmod 750 /home/usuario2/archivo1.txt
+sudo chmod 750 /home/usuario2/archivo2.txt
 sudo setfacl -m u:usuario4:rwx /home/usuario5/archivo2.txt
 sudo setfacl -m u:usuario4:rwx /home/usuario6/archivo3.txt
 ```
