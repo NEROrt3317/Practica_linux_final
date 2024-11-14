@@ -129,9 +129,9 @@ sudo setfacl -m u:usuario4:rwx /home/usuario6/archivo3.txt
 sudo chmod 770 /home/usuario8/archivo2.txt
 sudo chmod 770 /home/usuario9/archivo3.txt
 sudo chown usuario8:grupojuancho /home/usuario8/archivo2.txt
-sudo chown usuario9:grupojuancho /home/usuario8/archivo3.txt
+sudo chown usuario9:grupojuancho /home/usuario8/archivo2.txt
 
-sudo chmod 750 /home/usuario3/archivo1.txt
+sudo chmod 750 /home/usuario3/archivo3.txt
 sudo setfacl -m u:usuario7:rwx /home/usuario8/archivo2.txt
 sudo setfacl -m u:usuario7:rwx /home/usuario9/archivo3.txt
 ```
