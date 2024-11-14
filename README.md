@@ -36,6 +36,7 @@ sudo useradd -m -G grupojuancho usuario9
 ```
 
 ## Crear contraseña para los usuarios
+_NOTA_: No funciona para todas las distribuciones de linux, tener en cuenta 
 
 ```
 echo "contraseña1" | sudo passwd --stdin usuario1
