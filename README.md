@@ -1,5 +1,6 @@
 # Practica_linux_final
 Esto en la entrega de practica de linux final 
+# Estudiantes _NEHIR RODRIGUEZ TAPIAS - SOFIA LOPERA DIEZ & JUAN DAVID IDARRAGA_
 # ejercicios 
 1. 3 grupos con 3 usuarios cada uno.
 2. Cada usuario debe tener mínimo un archivo.txt o .doc
